@@ -12,5 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  App::setLocale('en');
+  return view('welcome');
+});
+
+Route::get('/{locale}', function ($locale) {
+  App::setLocale($locale);
+  return view('welcome');
+});
+
+Route::get('/privacy/{locale}', function ($locale) {
+  App::setLocale($locale);
+  return view('privacy');
 });
