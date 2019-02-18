@@ -160,10 +160,10 @@
 
                     <div class="row">
                         <div class="col-xs">
-                            <a href=""><img src="/images/app-store-ru.svg" style="width: 125px; margin: 10px;"/></a>
+                            <a href=""><img src="/images/app-store-{{app()->getLocale()}}.svg" style="width: 125px; margin: 10px;"/></a>
                         </div>
                         <div class="col-xs">
-                            <a href=""><img src="/images/google-play-ru.png" style="width: 160px;"/></a>
+                            <a href=""><img src="/images/google-play-{{app()->getLocale()}}.png" style="width: 160px;"/></a>
                         </div>
                     </div>
 
