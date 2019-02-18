@@ -23,7 +23,7 @@ class BackupController extends Controller
 
   public function autoSaveBackup(Request $request)
   {
-    $item = AutoBackup::updateOrCreate(
+    AutoBackup::updateOrCreate(
         ['user_id' => Auth::user()->id],
         ['data' => $request->getContent()]
     );
@@ -43,7 +43,7 @@ class BackupController extends Controller
 
   public function getBackups()
   {
-    $backups = Backup::where('user_id', Auth::user()->id)->get();
+    $backups = Backup::where('user_id', Auth::user()->id)->orderBy('updated_at', 'desc')->get();
     return response([
         'status' => 'success',
         'backups' => $backups,
