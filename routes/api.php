@@ -25,4 +25,10 @@ Route::group(['middleware' => 'jwt.auth'], function() {
   Route::get('backup/{id}', 'BackupController@getBackup');
   Route::post('backup_save', 'BackupController@saveBackup');
   Route::delete('backup_delete/{id}', 'BackupController@deleteBackup');
+
+
+  Route::post('backup_auto_save', 'BackupController@autoSaveBackup');
+  Route::get('get_auto_backup', 'BackupController@getAutoBackup');
+
+
 });

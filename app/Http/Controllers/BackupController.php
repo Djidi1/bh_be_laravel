@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Backup;
+use App\AutoBackup;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,6 +19,25 @@ class BackupController extends Controller
     return response([
         'status' => 'success',
     ], 200);
+  }
+
+  public function autoSaveBackup(Request $request)
+  {
+    $item = AutoBackup::where('user_id', Auth::user()->id);
+    $item->data = $request->getContent();
+    $item->save();
+    return response([
+        'status' => 'success',
+    ], 200);
+  }
+
+  public function getAutoBackup()
+  {
+    $backup = AutoBackup::where('user_id', Auth::user()->id)->get();
+    return response([
+        'status' => 'success',
+        'backup' => $backup,
+    ]);
   }
 
   public function getBackups()
