@@ -23,9 +23,10 @@ class BackupController extends Controller
 
   public function autoSaveBackup(Request $request)
   {
-    $item = AutoBackup::where('user_id', Auth::user()->id);
-    $item->data = $request->getContent();
-    $item->save();
+    $item = AutoBackup::updateOrCreate(
+        ['user_id' => Auth::user()->id],
+        ['data' => $request->getContent()]
+    );
     return response([
         'status' => 'success',
     ], 200);
