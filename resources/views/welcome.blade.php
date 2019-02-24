@@ -160,10 +160,10 @@
 
                     <div class="row">
                         <div class="col-xs">
-                            <a href=""><img src="/images/app-store-{{app()->getLocale()}}.svg" style="width: 125px; margin: 10px;"/></a>
+                            <a href="#" onclick="alert('Coming soon...')"><img src="/images/app-store-{{app()->getLocale()}}.svg" style="width: 125px; margin: 10px;"/></a>
                         </div>
                         <div class="col-xs">
-                            <a href=""><img src="/images/google-play-{{app()->getLocale()}}.png" style="width: 160px;"/></a>
+                            <a href="https://play.google.com/store/apps/details?id=ru.bhapp.app" target="_blank"><img src="/images/google-play-{{app()->getLocale()}}.png" style="width: 160px;"/></a>
                         </div>
                     </div>
 
