@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Just to do!</title>
+    <title>Just To Do!</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,500&amp;subset=cyrillic" rel="stylesheet">
@@ -174,13 +174,13 @@
                     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="/images/slide_1.png" class="d-block w-100" alt="1">
+                                <img src="/images/{{app()->getLocale()}}_slide_1.png" class="d-block w-100" alt="1">
                             </div>
                             <div class="carousel-item">
-                                <img src="/images/slide_2.png" class="d-block w-100" alt="2">
+                                <img src="/images/{{app()->getLocale()}}_slide_2.png" class="d-block w-100" alt="2">
                             </div>
                             <div class="carousel-item">
-                                <img src="/images/slide_3.png" class="d-block w-100" alt="3">
+                                <img src="/images/{{app()->getLocale()}}_slide_3.png" class="d-block w-100" alt="3">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
